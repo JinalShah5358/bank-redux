@@ -25,6 +25,7 @@ export default function customerReducer(state = initialCustomerState, action) {
 }
 
 export function customerCreate(fullname, nationId) {
+  console.log("running");
   return {
     type: "customer/Customercreate",
     payload: { fullname, nationId, created: new Date().toISOString() },

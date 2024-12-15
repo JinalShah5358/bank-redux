@@ -21,8 +21,8 @@ export default function accountReducer(state = initialAccountState, action) {
       return {
         ...state,
         loan: action.payload.amount,
-        purpose: action.payload.purpose,
-        balance: state.balance + action.payload.amount,
+        loanPurpose: action.payload.purpose,
+        balance: state.balance + Number(action.payload.amount),
       };
     case "account/payLoan":
       return {
@@ -45,7 +45,8 @@ export function withdraw(amount) {
 }
 
 export function requestLoan(amount, purpose) {
-  return { type: "account/withdraw", payload: { amount, purpose } };
+  console.log(typeof amount, amount);
+  return { type: "account/requestLoan", payload: { amount, purpose } };
 }
 
 export function payLoan() {
