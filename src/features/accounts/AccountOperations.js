@@ -91,13 +91,13 @@ function AccountOperations() {
             onChange={(e) => setLoanPurpose(e.target.value)}
             placeholder="Loan purpose"
           />
-          <button onClick={handleRequestLoan}>Request loan</button>
+          <button onClick={handleRequestLoan}>Request loan 1</button>
         </div>
 
         {currentLoan > 0 && (
           <div>
             <span>Pay back ${currentLoan + " | " + currentLoanPurpose}</span>
-            <button onClick={handlePayLoan}>Pay loan</button>
+            <button onClick={handlePayLoan}>Pay loan 1 </button>
           </div>
         )}
       </div>
